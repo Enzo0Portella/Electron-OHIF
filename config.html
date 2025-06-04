@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Settings</title>
+  <link href="./styles/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-6">
+  <h1 class="text-2xl font-bold mb-4">Settings</h1>
+  <form id="configForm" class="bg-white p-6 rounded shadow-md">
+    <div class="mb-4">
+      <label for="defaultLanguage" class="block text-gray-700">Default Language:</label>
+
+      <select name="DEFAULT_LANGUAGE" id="defaultLanguage" class="mt-1 block w-full border border-gray-300 rounded p-2">
+        <option value="en">English</option>
+        <option value="pt">Portuguese</option>
+      </select>
+    </div>
+    <div class="mb-4">
+      <label for="inputFilesDir" class="block text-gray-700">Input Files Directory:</label>
+      <input type="text" id="inputFilesDir" name="INPUT_FILES_DIR" class="mt-1 block w-full border border-gray-300 rounded p-2">
+    </div>
+    <div class="mb-4">
+      <label for="outputFilesDir" class="block text-gray-700">Output Files Directory:</label>
+      <input type="text" id="outputFilesDir" name="OUTPUT_FILES_DIR" class="mt-1 block w-full border border-gray-300 rounded p-2">
+    </div>
+    <div class="mb-4">
+      <label for="wadoServerPort" class="block text-gray-700">WADO Server Port:</label>
+      <input type="number" id="wadoServerPort" name="WADO_SERVER_PORT" class="mt-1 block w-full border border-gray-300 rounded p-2">
+    </div>
+    <div class="mb-4">
+      <label for="apiPort" class="block text-gray-700">API Port:</label>
+      <input type="number" id="apiPort" name="API_PORT" class="mt-1 block w-full border border-gray-300 rounded p-2">
+    </div>
+    <div class="mb-4">
+      <label for="viewerUrl" class="block text-gray-700">Viewer URL:</label>
+      <input type="text" id="viewerUrl" name="OHIF_VIEWER_URL" class="mt-1 block w-full border border-gray-300 rounded p-2">
+    </div>
+    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Save</button>
+  </form>
+  <script src="config.js"></script>
+</body>
+</html>
