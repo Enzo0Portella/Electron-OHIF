@@ -8,7 +8,8 @@
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "electron-builder",
-    "build:win": "electron-builder --win"
+    "build:win": "electron-builder --win",
+    "start:servers": "node start-servers.js"
   },
   "keywords": [],
   "author": {
@@ -20,7 +21,8 @@
   "devDependencies": {
     "electron": "^33.2.1",
     "electron-builder": "^25.1.8",
-    "electron-rebuild": "^3.2.9"
+    "electron-rebuild": "^3.2.9",
+    "ts-node": "^10.9.2"
   },
   "dependencies": {
     "@nestjs/common": "^10.4.15",

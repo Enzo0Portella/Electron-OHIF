@@ -1,0 +1,11 @@
+{
+  // Configuração para o static-wado
+  staticWadoConfig: {
+    rootDir: '/c:/Users/enzo.zorzin/CT/Electron-OHIF/dicom-image-example/series-000001'
+  },
+  // Configuração para o servidor DICOMweb
+  dicomWebServerConfig: {
+    studyQuery: "studyQueryReadIndex",
+    port: 5000
+  }
+} 
