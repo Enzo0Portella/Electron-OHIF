@@ -77,4 +77,32 @@ Se você encontrar algum dos seguintes problemas:
 
 - Sempre execute o IDE como administrador ao trabalhar com este projeto
 - Aguarde o build completo do OHIF antes de tentar executar o aplicativo
-- Mantenha todas as dependências atualizadas usando `yarn install` 
+- Mantenha todas as dependências atualizadas usando `yarn install`
+
+## Conversão de Arquivos DICOM
+
+Para converter arquivos DICOM e utilizá-los no visualizador, siga os passos abaixo:
+
+1. Navegue até o diretório do static-wado-creator:
+   ```bash
+   cd packages/static-wado-creator
+   ```
+
+2. Execute o comando de conversão:
+   ```bash
+   node bin/mkdicomweb.js create <CAMINHO-DOS-ARQUIVOS-DICOM>
+   ```
+   
+   Exemplo:
+   ```bash
+   node bin/mkdicomweb.js create ../../dicom-image-example/series-000001
+   ```
+
+### Observações sobre a Conversão
+
+- Os arquivos convertidos serão salvos por padrão em `~/dicomweb/`
+- Certifique-se de que o caminho para os arquivos DICOM está correto
+- O comando não suporta glob patterns, então especifique o caminho completo do diretório
+- Para gerar miniaturas (thumbnails), você precisa ter instalado:
+  - dcm2jpg do dcm4che (para imagens)
+  - ffmpeg (para vídeos) 
